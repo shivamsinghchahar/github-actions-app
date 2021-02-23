@@ -28,7 +28,7 @@ RSpec.describe Post, type: :feature do
   end
 
   it 'should edit the created post' do
-    post = Post.create(title: 'First Post', content: 'Lorem Ipsum')
+    post = create :post
 
     visit edit_post_path(post)
     fill_in 'Title', with: post.title + ' Edited'
@@ -41,7 +41,7 @@ RSpec.describe Post, type: :feature do
   end
 
   it 'should deleted the post' do
-    post = Post.create(title: 'First Post', content: 'Lorem Ipsum')
+    post = create :post
 
     visit posts_path
     expect(page).to have_content post.title

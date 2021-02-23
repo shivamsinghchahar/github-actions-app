@@ -23,10 +23,10 @@ jobs:
       - name: Install library for postgres
         run: sudo apt-get install libpq-dev
 
-      - name: <%= "Set up Ruby 2.7.2" %>
+      - name: <%= "Set up Ruby 2.7.1" %>
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.2
+          ruby-version: 2.7.1
 
       - name: Ruby gem cache
         uses: actions/cache@v1
